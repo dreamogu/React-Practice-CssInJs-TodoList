@@ -1,3 +1,31 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #212121;
+  --color-accent: #3964fd;
+  --color-mode: #ffc700;
+  --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  --color-white: #ffffff;
+  --color-border: #ebebeb;
+  --color-gray: #999999;
+  --color-list: #ffffff;
+}
+
+html.dark {
+  --color-bg: #373636;
+  --color-text: #fafafa;
+  --color-accent: #3964fd;
+  --color-mode: #f49d1a;
+  --box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.25);
+  --color-white: #ffffff;
+  --color-list: #2e2d2d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +33,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background: url(../public/light_bg.JPG);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  accent-color: var(--color-accent);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
+  height: 60%;
+  max-width: 360px;
+  background: var(--color-bg);
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
